@@ -1,0 +1,25 @@
+<!--<form (submit)="loginUser($event)">
+    <input type="text" placeholder="username" >
+    <input type="text" placeholder="password"  >
+    <input type="submit" value="submit">
+</form>
+
+
+
+
+<form  (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+    <input type="text" name="username" placeholder="username" required autofocus ngModel>
+    <input type="text" name="password" placeholder="password" required autofocus ngModel >
+    <button btn btn-primary type="submit">Login</button>
+</form>-->
+
+<form [formGroup]="formGroup" (ngSubmit)="loginProcess()">
+    <input type="text" placeholder="userid" formControlName="user_id">
+    <input type="text" placeholder="password" formControlName="password" >
+    <input type="submit" value="submit">
+</form>
+
+<!--<div *ngIf="msgTrue else showLogin" roterLink="/users"> successful</div>
+<ng-template #showLogin><a routerLink="/login"></a></ng-template>-->
+
+

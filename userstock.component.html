@@ -1,0 +1,21 @@
+
+<table border="1">
+    <thead></thead>
+    <tr>
+      
+      
+      
+      <th>Stock Quantity</th>
+      <th>Stock Price</th>
+      <th>Stock Symbol</th>
+      </tr>
+    
+    <tbody>
+        <tr *ngFor="let user of employees">
+           
+            <td>{{user.perc_ChangeIn_Price}}</td>
+            <td>{{user.stockPrice}}</td>
+            <td>{{user.stock_Symbol}}</td>
+            </tr>
+    </tbody>
+      </table>
