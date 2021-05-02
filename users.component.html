@@ -1,0 +1,73 @@
+<!--<table border="1">
+    <thead></thead>
+    <tr>
+    
+      <th>UserID</th>
+      <th>Username</th>
+      <th>Password</th>
+      </tr>
+    
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.userID}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
+            </tr>
+    </tbody>
+      </table>-->
+
+      <button (click)="random1(45000,100000)">45k-1L</button>
+<button (click)="random1(100000,300000)">1L-3L</button>
+<button (click)="random1(300000,600000)">3L-6L</button>
+<button (click)="random1(600000,1500000)">6L-15L</button>
+
+
+
+
+<table border="1">
+    <thead>
+      <tr>
+        <th>Stock Symbol</th>
+        <th>Stock Price</th>
+        <th>Percent Change in Price</th>
+        </tr>
+
+    </thead>
+    
+    
+    <tbody>
+        <tr *ngFor="let user of marketcaps">
+            <td>{{user.stock_Symbol}}</td>
+            <td>{{user.stockPrice}}</td>
+            <td>{{user.perc_ChangeIn_Price}}</td>
+           <!--<td><label for="fname">Stock Quantity</label><input type="number" value="quantity"></td>-->
+           <td>
+            <input #stockQuantity type="number" name="quantity" id="stockQuantity" >
+
+               <!--<input type="number" name="quantity" [value]="quantity">
+               <input type="submit" value="submit">-->
+              
+            <!--<button (click)="lgbtnclick()" type="button" name="button">Enter</button>-->
+            </td>
+            <!--<td><button type="submit" (click)="saveStock(user.stock_Symbol,user.stockPrice,user.perc_ChangeIn_Price)">Save Stock</button></td>
+            <td><button type="submit" (click)="saveStock(user.stock_Symbol,user.stockPrice,user.perc_ChangeIn_Price,)">Save Stock</button></td>-->
+            <td>
+              <button (click)="saveStock(user.stock_Symbol,user.stockPrice,user.perc_ChangeIn_Price, stockQuantity.value)">Save</button> 
+
+            </td>
+            </tr>
+    </tbody>
+      </table>
+    
+
+     <!-- <div *ngIf="msgTrue "> 
+        <form [formGroup]="formGroup" (ngSubmit)="random3">
+          <input type="number" name="quantity" [value]="quantity">
+          <input type="submit" value="submit">
+
+        </form>
+        
+
+      </div>
+    -->
+      <button btn (click)="random2()">Fetch Saved Stock</button>
